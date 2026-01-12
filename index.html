@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<!-- Tells the browser: “Hey, this is a modern HTML document” -->
+<html lang="en">
+<head>
+	<!-- Character encoding (handles symbols, emojis, etc.) -->
+	<meta charset="UTF-8">
+
+	<!-- Helps with compatibility in older browsers (mostly legacy stuff) -->
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+	<!-- Makes the site scale properly on phones and tablets -->
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<!-- Title shown in the browser tab -->
+	<title>Task App 2023</title>
+
+	<!-- Google Material Icons (used for edit / delete icons) -->
+	<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+	<!-- Link to your CSS file -->
+	<link rel="stylesheet" href="main.css">
+</head>
+<body>
+	
+	<!-- Main content area -->
+	<main>
+
+		<!-- App container (keeps everything centered and tidy) -->
+		<div class="app">
+
+			<!-- Top section with title and add button -->
+			<header>
+				<!-- App title -->
+				<h1>Your Todos</h1>
+
+				<!-- Button that creates a new todo -->
+				<button id="create">Add new todo</button>
+			</header>
+
+			<!-- Where all todo items will appear -->
+			<div class="todo-list" id="list">
+
+				<!-- 
+					This is an example of ONE todo item.
+					It’s commented out because JavaScript will create these dynamically.
+				-->
+
+				<!--
+				<div class="item">
+					
+					Checkbox to mark todo as done
+					<input type="checkbox" />
+
+					The actual todo text
+					Disabled means you can’t edit it until you click "edit"
+					<input 
+						type="text" 
+						value="Todo content goes here" 
+						disabled />
+
+					Buttons for edit and delete
+					<div class="actions">
+						
+						Edit button (pencil icon)
+						<button class="material-icons">edit</button>
+
+						Delete button (red remove icon)
+						<button class="material-icons remove-btn">
+							remove_circle
+						</button>
+					</div>
+
+				</div>
+				-->
+
+			</div>
+
+		</div>
+
+	</main>
+
+	<!-- JavaScript file that makes everything actually work -->
+	<script src="main.js"></script>
+</body>
+</html>

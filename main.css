@@ -1,0 +1,140 @@
+/* Reset all the annoying default browser spacing */
+* {
+	margin: 0;               /* No random margins */
+	padding: 0;              /* No random padding */
+	box-sizing: border-box;  /* Sizes behave the way you expect */
+
+	font-family: sans-serif; /* Simple, clean font */
+}
+
+/* Strip buttons of their ugly default styles */
+button {
+	appearance: none;        /* Remove OS styling */
+	background: none;        /* No background */
+	outline: none;           /* No focus outline */
+	border: none;            /* No border */
+
+	cursor: pointer;         /* Hand cursor on hover */
+}
+
+/* Overall page look */
+body {
+	background-color: #242948; /* Dark background */
+	color: #fff;               /* White text everywhere */
+}
+
+/* Main wrapper that centers everything */
+main {
+	min-height: 100vh;       /* Take up the whole screen height */
+	display: flex;           /* Flexbox for easy centering */
+	justify-content: center; /* Center stuff horizontally */
+	padding: 2rem 1.5rem;    /* Space around the app */
+}
+
+/* The actual app box */
+.app {
+	width: 100%;             /* Full width on small screens */
+	max-width: 768px;        /* Don’t get too wide on big screens */
+}
+
+/* Top section with title + button */
+.app header {
+	display: flex;           /* Put items in a row */
+	align-items: center;     /* Center them vertically */
+	justify-content: space-between; /* Push title left, button right */
+	margin-bottom: 1rem;
+}
+
+/* App title */
+.app header h1 {
+	color: #fff;
+	font-size: 24px;
+	font-weight: 400;        /* Not too bold */
+}
+
+/* Button in the header (like "Add" or "Clear") */
+.app header button {
+	color: #fff;
+	font-size: 18px;
+	border-bottom: 2px solid #fff; /* Fake underline */
+	text-transform: uppercase;     /* ALL CAPS */
+}
+
+/* One single todo item */
+.item {
+	display: flex;           /* Line up checkbox, text, buttons */
+	align-items: center;
+	justify-content: space-between;
+	padding: 1.5rem;
+	border-radius: 1rem;     /* Nice rounded corners */
+	background-color: #1e223d; /* Slightly lighter than background */
+	box-shadow: 0 0 4px rgba(0, 0, 0, 0.1);
+	margin-bottom: 1.5rem;
+}
+
+/* Remove extra space under the last item */
+.item:last-of-type {
+	margin-bottom: 0;
+}
+
+/* Space between checkbox and text */
+.item input[type="checkbox"] {
+	margin-right: 1rem;
+}
+
+/* The todo text input */
+.item input[type="text"] {
+	appearance: none;
+	background: none;
+	border: none;
+	outline: none;
+	font-weight: 400;
+	color: #fff;
+	font-size: 20px;
+	flex: 1 1 0%;           /* Let it stretch to fill space */
+	margin-right: 1rem;
+}
+
+/* Show an underline when text is editable */
+.item input[type="text"]:not(:disabled) {
+	border-bottom: 2px solid #fff;
+}
+
+/* Todo is marked as done */
+.item.complete {
+	opacity: 0.7;            /* Fade it out a bit */
+}
+
+/* Cross out completed todo text */
+.item.complete input[type="text"] {
+	text-decoration: line-through;
+}
+
+/* Highlight item when hovering or typing inside it */
+.item:hover,
+.item:focus-within {
+	outline: 2px solid #fff;
+}
+
+/* Buttons like edit / delete */
+.actions button {
+	color: #CCC;
+	margin-right: 1rem;
+	opacity: 0.8;            /* Slightly faded */
+	transform: 0.1s;         /* (This should probably be transition) */
+}
+
+/* Delete button = danger color */
+.actions button.remove-btn {
+	color: crimson;
+}
+
+/* Make buttons stand out on hover */
+.actions button:hover {
+	opacity: 1;
+}
+
+/* Don’t add space after the last button */
+.actions button:last-of-type {
+	margin-right: 0;
+}
